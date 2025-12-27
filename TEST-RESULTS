@@ -1,0 +1,21 @@
+# TEST-RESULTS – Calculator Black-box Testing
+
+Datum testiranja: 27.12.2025
+
+Testirani izrazi i zapažanja:
+
+1. 4+5 -> 9.0 (prošlo)
+2. 2+3*4 -> 14.0 (prošlo, prioritet operacija funkcioniše)
+3. 10/0 -> Infinity (problem: deljenje nulom ne daje korisnički friendly poruku)
+4. -5+2 -> -3.0 (prošlo)
+5. 4*-2 -> -8.0 (prošlo)
+6. 2.5*4 -> 10.0 (prošlo)
+7. "" -> ERROR (problem: prazni string izaziva izuzetak u nekim verzijama)
+8. abc+2 -> ERROR (prošlo, greška detektovana)
+9. 2+3*4-5/2 -> 11.5 (prošlo)
+
+Detektovani propusti i nedostaci:
+- Nedostatak podrške za zagrade
+- Deljenje nulom nije objašnjeno korisniku
+- Negativni brojevi u kompleksnim izrazima ponekad izazivaju greške
+- Prazan string ili whitespace izaziva izuzetak
